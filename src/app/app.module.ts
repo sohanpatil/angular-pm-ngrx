@@ -14,6 +14,9 @@ import { MenuComponent } from './home/menu.component';
 import { WelcomeComponent } from './home/welcome.component';
 import { PageNotFoundComponent } from './home/page-not-found.component';
 
+//imports for initializing NgRx store
+import {StoreModule} from '@ngrx/store';
+
 /* Feature Modules */
 import { UserModule } from './user/user.module';
 
@@ -22,6 +25,7 @@ import { UserModule } from './user/user.module';
     BrowserModule,
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(ProductData),
+    StoreModule.forRoot({}),
     UserModule,
     AppRoutingModule
   ],

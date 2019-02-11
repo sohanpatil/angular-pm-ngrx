@@ -19,6 +19,8 @@ import {StoreModule} from '@ngrx/store';
 
 /* Feature Modules */
 import { UserModule } from './user/user.module';
+import {StoreDevtoolsModule} from '@ngrx/store-devtools'
+import {environment} from '../environments/environment.prod'
 
 @NgModule({
   imports: [
@@ -26,6 +28,11 @@ import { UserModule } from './user/user.module';
     HttpClientModule,
     HttpClientInMemoryWebApiModule.forRoot(ProductData),
     StoreModule.forRoot({}),
+    StoreDevtoolsModule.instrument({
+      name: 'XYZPM Demo App DevTools',
+      maxAge: 25,
+      logOnly: environment.production
+    }),
     UserModule,
     AppRoutingModule
   ],

@@ -2,7 +2,11 @@ import { Component } from '@angular/core';
 
 @Component({
     template: `
-    <h1>This is not the page you were looking for!</h1>
+    <pm-menu></pm-menu>
+    <br/>
+    <br/>
+    <br/>
+    <h3 align="center">Sorry, no such page exists!</h3>
     `
 })
 export class PageNotFoundComponent { }
